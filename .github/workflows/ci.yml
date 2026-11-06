@@ -1,0 +1,73 @@
+name: Pull Request CI & Policy Enforcement
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+jobs:
+  enforce-pr-limit:
+    name: Enforce Single Open PR Policy
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request' && (github.event.action == 'opened' || github.event.action == 'reopened')
+    steps:
+      - name: Verify Contributor Open PR Count
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          AUTHOR: ${{ github.event.pull_request.user.login }}
+          CURRENT_PR: ${{ github.event.pull_request.number }}
+        run: |
+          echo "Checking active pull requests for author: ${AUTHOR}"
+          OPEN_PRS=$(gh pr list --repo "${{ github.repository }}" --author "${AUTHOR}" --state open --json number --jq '.[].number')
+          COUNT=$(echo "${OPEN_PRS}" | grep -c . || true)
+          echo "Found ${COUNT} open pull request(s) by ${AUTHOR}."
+
+          if [ "${COUNT}" -gt 1 ]; then
+            echo "Policy violation: contributor ${AUTHOR} has ${COUNT} open PRs."
+            COMMENT="Thank you for your interest in contributing to KavoshRank. 
+
+According to our contribution policy, each contributor is allowed only **one open pull request at a time**. 
+
+You already have an active open pull request. Please wait until your existing pull request is reviewed and merged before opening a new one. Closing this pull request automatically."
+
+            gh pr comment "${CURRENT_PR}" --body "${COMMENT}"
+            gh pr close "${CURRENT_PR}"
+            exit 1
+          fi
+
+          echo "Contributor ${AUTHOR} is within the allowed limit (1 open PR)."
+
+  php-syntax-check:
+    name: PHP Syntax Linting
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php-version: ['8.1', '8.2', '8.3']
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up PHP ${{ matrix.php-version }}
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+          extensions: curl, json, openssl, mbstring
+          tools: php-cs-fixer
+
+      - name: Lint PHP Syntax
+        run: |
+          echo "Checking syntax across all PHP files under PHP ${{ matrix.php-version }}..."
+          ERRORS=0
+          while IFS= read -r file; do
+            php -l "$file" || ERRORS=$((ERRORS + 1))
+          done < <(find . -type f -name "*.php" -not -path "*/vendor/*" -not -path "*/build/*")
+
+          if [ $ERRORS -ne 0 ]; then
+            echo "Found ${ERRORS} syntax error(s)."
+            exit 1
+          fi
+          echo "All PHP files passed syntax checks cleanly."

@@ -1,0 +1,111 @@
+name: Build and Release Plugin
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      tag_name:
+        description: 'Tag name to release (e.g. v1.0.1)'
+        required: true
+        default: 'v1.0.1'
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Resolve Version Information
+        id: vars
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            TAG="${{ github.event.inputs.tag_name }}"
+          else
+            TAG="${{ github.ref_name }}"
+          fi
+          VERSION="${TAG#v}"
+          echo "tag=${TAG}" >> $GITHUB_OUTPUT
+          echo "version=${VERSION}" >> $GITHUB_OUTPUT
+          echo "Building KavoshRank WordPress Plugin release for ${TAG} (version ${VERSION})"
+
+      - name: Verify Plugin Version Header
+        run: |
+          HEADER_VER=$(grep -i "Version:" kavoshrank.php | head -n1 | sed -E 's/.*Version:[[:space:]]*([0-9.]+).*/\1/')
+          CONST_VER=$(grep -i "KAVOSHRANK_VERSION" kavoshrank.php | head -n1 | sed -E "s/.*'([0-9.]+)'.*/\1/")
+          echo "Header version: ${HEADER_VER}"
+          echo "Constant version: ${CONST_VER}"
+          echo "Tag version: ${{ steps.vars.outputs.version }}"
+
+      - name: Assemble WordPress Plugin Package
+        run: |
+          mkdir -p build/kavoshrank
+          rsync -av --exclude='.git' \
+                    --exclude='.github' \
+                    --exclude='build' \
+                    --exclude='tests' \
+                    --exclude='.gitignore' \
+                    ./ build/kavoshrank/
+
+          cd build
+          zip -r kavoshrank.zip kavoshrank/
+          cp kavoshrank.zip kavoshrank-${{ steps.vars.outputs.tag }}.zip
+          sha256sum kavoshrank.zip > kavoshrank.zip.sha256
+          sha256sum kavoshrank-${{ steps.vars.outputs.tag }}.zip > kavoshrank-${{ steps.vars.outputs.tag }}.zip.sha256
+          cd ..
+
+      - name: Publish Versioned GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="${{ steps.vars.outputs.tag }}"
+          VERSION="${{ steps.vars.outputs.version }}"
+
+          gh release create "${TAG}" \
+            build/kavoshrank.zip \
+            build/kavoshrank-${TAG}.zip \
+            build/kavoshrank.zip.sha256 \
+            build/kavoshrank-${TAG}.zip.sha256 \
+            --title "KavoshRank WordPress Plugin v${VERSION}" \
+            --generate-notes \
+            --verify-tag || gh release upload "${TAG}" \
+              build/kavoshrank.zip \
+              build/kavoshrank-${TAG}.zip \
+              build/kavoshrank.zip.sha256 \
+              build/kavoshrank-${TAG}.zip.sha256 --clobber
+
+      - name: Update Floating Latest Tag and Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="${{ steps.vars.outputs.tag }}"
+          VERSION="${{ steps.vars.outputs.version }}"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git tag -f latest "${TAG}"
+          git push -f origin latest
+
+          RELEASE_BODY="### KavoshRank WordPress Plugin - Latest Release (v${VERSION})
+
+Direct Download: [kavoshrank.zip](https://github.com/Kavoshrank/wordpress/releases/download/latest/kavoshrank.zip)
+
+This release always points to the most recent stable release of the KavoshRank WordPress Plugin.
+For version-specific release notes and checksums, see [Release ${TAG}](https://github.com/Kavoshrank/wordpress/releases/tag/${TAG})."
+
+          gh release delete latest --yes || true
+
+          gh release create latest \
+            build/kavoshrank.zip \
+            build/kavoshrank.zip.sha256 \
+            --title "KavoshRank WordPress Plugin (Latest: v${VERSION})" \
+            --notes "${RELEASE_BODY}" \
+            --prerelease=false

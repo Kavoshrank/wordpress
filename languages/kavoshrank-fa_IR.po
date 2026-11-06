@@ -1,0 +1,1540 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: KavoshRank SEO Client 1.0.0\n"
+"Report-Msgid-Bugs-To: https://kavoshrank.ir\n"
+"POT-Creation-Date: 2026-10-05 08:58+0330\n"
+"PO-Revision-Date: 2026-10-05 08:58+0330\n"
+"Last-Translator: KavoshRank Team <support@kavoshrank.ir>\n"
+"Language-Team: Persian (fa_IR) <support@kavoshrank.ir>\n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: KavoshRank i18n Tool\n"
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:24
+msgid "اسکیما و سئوی محلی (LocalBusiness Schema)"
+msgstr "اسکیما و سئوی محلی (LocalBusiness Schema)"
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:25
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:36
+msgid "Structured Data"
+msgstr "داده‌های ساختاریافته"
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:26
+msgid ""
+"تزریق ساختار داده استاندارد LocalBusiness به صفحه نخست تنها در صورت تکمیل "
+"نشانی و تلفن."
+msgstr ""
+"تزریق ساختار داده استاندارد LocalBusiness به صفحه نخست تنها در صورت تکمیل "
+"نشانی و تلفن."
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:27
+msgid "HTML <head> (صفحه نخست)"
+msgstr "HTML <head> (صفحه نخست)"
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:35
+msgid "اسکیما مقالات و محصولات (Schema.org)"
+msgstr "اسکیما مقالات و محصولات (Schema.org)"
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:37
+msgid ""
+"تولید ساختار داده منسجم TechArticle و Product برای نمایش ستاره‌ها و قیمت در "
+"نتایج گوگل."
+msgstr ""
+"تولید ساختار داده منسجم TechArticle و Product برای نمایش ستاره‌ها و قیمت در "
+"نتایج گوگل."
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:38
+msgid "HTML <head> (تمامی مقالات و محصولات)"
+msgstr "HTML <head> (تمامی مقالات و محصولات)"
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:46
+msgid "جایگزینی اسکیمای پیش‌فرض ووکامرس"
+msgstr "جایگزینی اسکیمای پیش‌فرض ووکامرس"
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:47
+msgid "WooCommerce"
+msgstr "ووکامرس"
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:48
+msgid ""
+"حذف ساختار داده تکراری پیش‌فرض ووکامرس جهت یکپارچه‌سازی و رعایت انحصاری "
+"دستورالعمل‌های گوگل."
+msgstr ""
+"حذف ساختار داده تکراری پیش‌فرض ووکامرس جهت یکپارچه‌سازی و رعایت انحصاری "
+"دستورالعمل‌های گوگل."
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:49
+msgid "WooCommerce Filters"
+msgstr "WooCommerce Filters"
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:57
+msgid "باکس شفافیت و بازبینی محتوا (E-E-A-T)"
+msgstr "باکس شفافیت و بازبینی محتوا (E-E-A-T)"
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:58
+msgid "Content Signals"
+msgstr "سیگنال‌های محتوایی"
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:59
+msgid ""
+"تزریق باکس شفاف هویت نویسنده، تاریخ به‌روزرسانی و بازبین کیفی در بالای مقالات "
+"وبلاگ."
+msgstr ""
+"تزریق باکس شفاف هویت نویسنده، تاریخ به‌روزرسانی و بازبین کیفی در بالای مقالات "
+"وبلاگ."
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:60
+msgid "ابتدای متن مقالات (the_content)"
+msgstr "ابتدای متن مقالات (the_content)"
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:68
+msgid "ویجت‌های افزایش نرخ تبدیل (CRO Widgets)"
+msgstr "ویجت‌های افزایش نرخ تبدیل (CRO Widgets)"
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:69
+msgid "Conversion"
+msgstr "نرخ تبدیل"
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:70
+msgid ""
+"نمایش دکمه‌های اقدام به عمل و مشاوره تلفنی متناسب با دسته مقاله بعد از "
+"پاراگراف سوم."
+msgstr ""
+"نمایش دکمه‌های اقدام به عمل و مشاوره تلفنی متناسب با دسته مقاله بعد از "
+"پاراگراف سوم."
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:71
+msgid "میانه مقالات (the_content)"
+msgstr "میانه مقالات (the_content)"
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:79
+msgid "فایروال ترافیک و ناظر ربات‌های AI (Bot Governor)"
+msgstr "فایروال ترافیک و ناظر ربات‌های AI (Bot Governor)"
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:80
+msgid "Bot Governance"
+msgstr "حکمرانی ربات‌ها"
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:81
+msgid ""
+"الحاق قوانین مجاز AI به robots.txt و مسدودسازی سریع اسکریپرهای متجاوز بدون "
+"مصرف منابع سرور."
+msgstr ""
+"الحاق قوانین مجاز AI به robots.txt و مسدودسازی سریع اسکریپرهای متجاوز بدون "
+"مصرف منابع سرور."
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:82
+msgid "Virtual robots.txt & HTTP Header"
+msgstr "Virtual robots.txt & HTTP Header"
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:90
+msgid "لینک‌سازی داخلی هوشمند (Auto Linking)"
+msgstr "لینک‌سازی داخلی هوشمند (Auto Linking)"
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:91
+msgid "SEO Architecture"
+msgstr "معماری سئو"
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:92
+msgid ""
+"پیوند خودکار و امن کلمات کلیدی مرتبط به صفحات هدف طبق معماری پیوند خوشه‌ای "
+"(Silo)."
+msgstr ""
+"پیوند خودکار و امن کلمات کلیدی مرتبط به صفحات هدف طبق معماری پیوند خوشه‌ای "
+"(Silo)."
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:93
+msgid "متن مقالات (the_content)"
+msgstr "متن مقالات (the_content)"
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:101
+msgid "تحویل نسل جدید تصاویر WebP"
+msgstr "تحویل نسل جدید تصاویر WebP"
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:102
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:113
+msgid "Performance"
+msgstr "کارایی و سرعت"
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:103
+msgid ""
+"جایگزینی هوشمند تگ‌های تصویر با نسخه فشرده WebP در خروجی HTML برای افزایش "
+"چشمگیر سرعت."
+msgstr ""
+"جایگزینی هوشمند تگ‌های تصویر با نسخه فشرده WebP در خروجی HTML برای افزایش "
+"چشمگیر سرعت."
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:104
+msgid "HTML Page Output"
+msgstr "HTML Page Output"
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:112
+msgid "پیش‌بارگذاری فونت وزیرمتن (Typography Preload)"
+msgstr "پیش‌بارگذاری فونت وزیرمتن (Typography Preload)"
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:114
+msgid ""
+"پیش‌بارگذاری تگ link rel=preload برای فونت فارسی جهت حذف جهش چیدمان (CLS = 0)."
+msgstr ""
+"پیش‌بارگذاری تگ link rel=preload برای فونت فارسی جهت حذف جهش چیدمان (CLS = 0)."
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:115
+msgid "HTML <head>"
+msgstr "HTML <head>"
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:123
+msgid "استاندارد فیدهای هوش مصنوعی (llms.txt & llms-full.txt)"
+msgstr "استاندارد فیدهای هوش مصنوعی (llms.txt & llms-full.txt)"
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:124
+msgid "GEO"
+msgstr "بهینه‌سازی موتورهای مولد (GEO)"
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:125
+msgid ""
+"ارائه فایل‌های خلاصه‌سازی استاندارد Markdown برای موتورهای جستجوی نسلی "
+"(ChatGPT, Perplexity)."
+msgstr ""
+"ارائه فایل‌های خلاصه‌سازی استاندارد Markdown برای موتورهای جستجوی نسلی "
+"(ChatGPT, Perplexity)."
+
+
+#: wp/plugins/kavoshrank/includes/class-kavoshrank-storefront-features.php:126
+msgid "/llms.txt و /llms-full.txt"
+msgstr "/llms.txt و /llms-full.txt"
+
+
+#: wp/plugins/kavoshrank/admin/class-kavoshrank-admin-pages.php:18
+msgid "مدیریت هوشمند سئو کاوش‌رنک"
+msgstr "مدیریت هوشمند سئو کاوش‌رنک"
+
+
+#: wp/plugins/kavoshrank/admin/class-kavoshrank-admin-pages.php:19
+msgid "کاوش‌رنک"
+msgstr "کاوش‌رنک"
+
+
+#: wp/plugins/kavoshrank/admin/class-kavoshrank-admin-pages.php:29
+msgid "داشبورد و وضعیت اتصال کاوش‌رنک"
+msgstr "داشبورد و وضعیت اتصال کاوش‌رنک"
+
+
+#: wp/plugins/kavoshrank/admin/class-kavoshrank-admin-pages.php:30
+msgid "داشبورد"
+msgstr "داشبورد"
+
+
+#: wp/plugins/kavoshrank/admin/class-kavoshrank-admin-pages.php:38
+msgid "تنظیمات اتصال به پلتفرم کاوش‌رنک"
+msgstr "تنظیمات اتصال به پلتفرم کاوش‌رنک"
+
+
+#: wp/plugins/kavoshrank/admin/class-kavoshrank-admin-pages.php:39
+msgid "تنظیمات اتصال"
+msgstr "تنظیمات اتصال"
+
+
+#: wp/plugins/kavoshrank/admin/class-kavoshrank-admin-pages.php:47
+msgid "ویژگی‌های سمت فروشگاه و قالب (Storefront Features)"
+msgstr "ویژگی‌های سمت فروشگاه و قالب (Storefront Features)"
+
+
+#: wp/plugins/kavoshrank/admin/class-kavoshrank-admin-pages.php:48
+msgid "ویژگی‌های فروشگاه"
+msgstr "ویژگی‌های فروشگاه"
+
+
+#: wp/plugins/kavoshrank/admin/class-kavoshrank-admin-pages.php:214
+msgid "آدرس API پلتفرم نمی‌تواند خالی باشد."
+msgstr "آدرس API پلتفرم نمی‌تواند خالی باشد."
+
+
+#: wp/plugins/kavoshrank/admin/class-kavoshrank-admin-pages.php:222
+msgid "کلید امنیتی اتصال نمی‌تواند خالی باشد."
+msgstr "کلید امنیتی اتصال نمی‌تواند خالی باشد."
+
+
+#: wp/plugins/kavoshrank/admin/class-kavoshrank-admin-pages.php:226
+msgid ""
+"کلید امنیتی باید حداقل ۳۲ کاراکتر بوده و نمی‌تواند از مقادیر پیش‌فرض استفاده "
+"کند."
+msgstr ""
+"کلید امنیتی باید حداقل ۳۲ کاراکتر بوده و نمی‌تواند از مقادیر پیش‌فرض استفاده "
+"کند."
+
+
+#: wp/plugins/kavoshrank/admin/class-kavoshrank-admin-pages.php:252
+
+#: wp/plugins/kavoshrank/admin/class-kavoshrank-admin-pages.php:263
+msgid "سطح دسترسی شما برای این عملیات مجاز نیست."
+msgstr "سطح دسترسی شما برای این عملیات مجاز نیست."
+
+
+#: wp/plugins/kavoshrank/admin/class-kavoshrank-admin-pages.php:270
+msgid "آدرس API پلتفرم الزامی است."
+msgstr "آدرس API پلتفرم الزامی است."
+
+
+#: wp/plugins/kavoshrank/admin/class-kavoshrank-admin-pages.php:290
+#, php-format
+msgid "خطا در برقراری اتصال: %s"
+msgstr "خطا در برقراری اتصال: %s"
+
+
+#: wp/plugins/kavoshrank/admin/class-kavoshrank-admin-pages.php:298
+msgid ""
+"ارتباط زنده با پلتفرم کاوش‌رنک با موفقیت تایید شد. پلتفرم فعال و آماده به کار "
+"است."
+msgstr ""
+"ارتباط زنده با پلتفرم کاوش‌رنک با موفقیت تایید شد. پلتفرم فعال و آماده به کار "
+"است."
+
+
+#: wp/plugins/kavoshrank/admin/class-kavoshrank-admin-pages.php:304
+#, php-format
+msgid "پاسخ از سرور دریافت شد (HTTP %d)."
+msgstr "پاسخ از سرور دریافت شد (HTTP %d)."
+
+
+#: wp/plugins/kavoshrank/admin/views/storefront-features.php:32
+msgid "ویژگی‌های سمت فروشگاه و کاربر"
+msgstr "ویژگی‌های سمت فروشگاه و کاربر"
+
+
+#: wp/plugins/kavoshrank/admin/views/storefront-features.php:38
+msgid ""
+"فهرست و وضعیت زنده تمامی قابلیت‌هایی که خروجی فرانت‌اند، ساختار HTML، اسکیما و "
+"رفتار ربات‌های فروشگاه را تغییر می‌دهند."
+msgstr ""
+"فهرست و وضعیت زنده تمامی قابلیت‌هایی که خروجی فرانت‌اند، ساختار HTML، اسکیما و "
+"رفتار ربات‌های فروشگاه را تغییر می‌دهند."
+
+
+#: wp/plugins/kavoshrank/admin/views/storefront-features.php:48
+msgid "تنظیمات پیشرفته"
+msgstr "تنظیمات پیشرفته"
+
+
+#: wp/plugins/kavoshrank/admin/views/storefront-features.php:56
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:86
+msgid "داشبورد کاوش‌رنک"
+msgstr "داشبورد کاوش‌رنک"
+
+
+#: wp/plugins/kavoshrank/admin/views/storefront-features.php:68
+msgid "تغییرات با موفقیت ذخیره شد!"
+msgstr "تغییرات با موفقیت ذخیره شد!"
+
+
+#: wp/plugins/kavoshrank/admin/views/storefront-features.php:69
+msgid ""
+"وضعیت قابلیت‌های فرانت‌اند و نحوه مداخله در قالب فروشگاه فوراً به‌روزرسانی گردید."
+msgstr ""
+"وضعیت قابلیت‌های فرانت‌اند و نحوه مداخله در قالب فروشگاه فوراً به‌روزرسانی گردید."
+
+
+#: wp/plugins/kavoshrank/admin/views/storefront-features.php:77
+msgid "کل ویژگی‌های سمت کاربر"
+msgstr "کل ویژگی‌های سمت کاربر"
+
+
+#: wp/plugins/kavoshrank/admin/views/storefront-features.php:78
+msgid "قابلیت"
+msgstr "قابلیت"
+
+
+#: wp/plugins/kavoshrank/admin/views/storefront-features.php:81
+msgid "ویژگی‌های فعال در قالب"
+msgstr "ویژگی‌های فعال در قالب"
+
+
+#: wp/plugins/kavoshrank/admin/views/storefront-features.php:82
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:628
+msgid "فعال"
+msgstr "فعال"
+
+
+#: wp/plugins/kavoshrank/admin/views/storefront-features.php:85
+msgid "ویژگی‌های غیرفعال (پیش‌فرض امن)"
+msgstr "ویژگی‌های غیرفعال (پیش‌فرض امن)"
+
+
+#: wp/plugins/kavoshrank/admin/views/storefront-features.php:86
+
+#: wp/plugins/kavoshrank/admin/views/storefront-features.php:134
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:443
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:533
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:996
+msgid "غیرفعال"
+msgstr "غیرفعال"
+
+
+#: wp/plugins/kavoshrank/admin/views/storefront-features.php:89
+msgid "خط‌مشی سلامت فروشگاه"
+msgstr "خط‌مشی سلامت فروشگاه"
+
+
+#: wp/plugins/kavoshrank/admin/views/storefront-features.php:90
+msgid "تغییرات با رضایت کاربر (Opt-In)"
+msgstr "تغییرات با رضایت کاربر (Opt-In)"
+
+
+#: wp/plugins/kavoshrank/admin/views/storefront-features.php:101
+msgid "فهرست ویژگی‌های سمت قالب و کاربر"
+msgstr "فهرست ویژگی‌های سمت قالب و کاربر"
+
+
+#: wp/plugins/kavoshrank/admin/views/storefront-features.php:102
+msgid ""
+"کنترل دقیق بر هرگونه دستکاری یا افزودن داده به کدهای HTML و فرانت‌اند سایت"
+msgstr ""
+"کنترل دقیق بر هرگونه دستکاری یا افزودن داده به کدهای HTML و فرانت‌اند سایت"
+
+
+#: wp/plugins/kavoshrank/admin/views/storefront-features.php:110
+msgid "ویژگی و دسته‌بندی"
+msgstr "ویژگی و دسته‌بندی"
+
+
+#: wp/plugins/kavoshrank/admin/views/storefront-features.php:111
+msgid "محل اثرگذاری در فروشگاه"
+msgstr "محل اثرگذاری در فروشگاه"
+
+
+#: wp/plugins/kavoshrank/admin/views/storefront-features.php:112
+msgid "وضعیت"
+msgstr "وضعیت"
+
+
+#: wp/plugins/kavoshrank/admin/views/storefront-features.php:113
+msgid "فعال / غیرفعال"
+msgstr "فعال / غیرفعال"
+
+
+#: wp/plugins/kavoshrank/admin/views/storefront-features.php:134
+msgid "فعال در فروشگاه"
+msgstr "فعال در فروشگاه"
+
+
+#: wp/plugins/kavoshrank/admin/views/storefront-features.php:154
+msgid "مشاهده فید"
+msgstr "مشاهده فید"
+
+
+#: wp/plugins/kavoshrank/admin/views/storefront-features.php:171
+msgid "ذخیره تغییرات ویژگی‌های فروشگاه"
+msgstr "ذخیره تغییرات ویژگی‌های فروشگاه"
+
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:13
+msgid "کلاینت هوشمند سئو و اتوماسیون محتوا کاوش‌رنک (KavoshRank)"
+msgstr "کلاینت هوشمند سئو و اتوماسیون محتوا کاوش‌رنک (KavoshRank)"
+
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:15
+msgid ""
+"پل ارتباطی، موتور خودترمیمی زنده سایت (Site Healer) و دروازه اختصاصی اتصال "
+"به پلتفرم مرکزی کاوش‌رنک"
+msgstr ""
+"پل ارتباطی، موتور خودترمیمی زنده سایت (Site Healer) و دروازه اختصاصی اتصال "
+"به پلتفرم مرکزی کاوش‌رنک"
+
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:21
+msgid "نوشته‌های وب‌سایت"
+msgstr "نوشته‌های وب‌سایت"
+
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:24
+msgid "پست‌های فعال وردپرس"
+msgstr "پست‌های فعال وردپرس"
+
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:30
+msgid "محصولات ووکامرس"
+msgstr "محصولات ووکامرس"
+
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:33
+msgid "محصولات فروشگاه"
+msgstr "محصولات فروشگاه"
+
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:39
+msgid "ویرایشگر نوشته‌ها"
+msgstr "ویرایشگر نوشته‌ها"
+
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:42
+msgid "ویرایشگر کلاسیک (فعال)"
+msgstr "ویرایشگر کلاسیک (فعال)"
+
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:43
+msgid "گوتنبرگ غیرفعال شده است"
+msgstr "گوتنبرگ غیرفعال شده است"
+
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:45
+msgid "گوتنبرگ بلوکی (فعال)"
+msgstr "گوتنبرگ بلوکی (فعال)"
+
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:46
+msgid "تغییر به ویرایشگر کلاسیک"
+msgstr "تغییر به ویرایشگر کلاسیک"
+
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:53
+msgid "پلتفرم مرکزی کاوش‌رنک"
+msgstr "پلتفرم مرکزی کاوش‌رنک"
+
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:57
+msgid "متصل و آماده به کار (Active)"
+msgstr "متصل و آماده به کار (Active)"
+
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:60
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:255
+msgid "نیاز به پیکربندی"
+msgstr "نیاز به پیکربندی"
+
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:61
+msgid "آدرس API تنظیم نشده است"
+msgstr "آدرس API تنظیم نشده است"
+
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:69
+msgid "اقدامات و دسترسی سریع"
+msgstr "اقدامات و دسترسی سریع"
+
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:74
+msgid "تنظیمات اتصال به پلتفرم"
+msgstr "تنظیمات اتصال به پلتفرم"
+
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:78
+msgid "لیست نوشته‌ها"
+msgstr "لیست نوشته‌ها"
+
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:83
+msgid "لیست محصولات"
+msgstr "لیست محصولات"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:10
+msgid "بازبینی و ارزیابی محتوا"
+msgstr "بازبینی و ارزیابی محتوا"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:11
+msgid "تیم تحریریه و کارشناسان"
+msgstr "تیم تحریریه و کارشناسان"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:60
+msgid "تنظیمات و پل ارتباطی کاوش‌رنک"
+msgstr "تنظیمات و پل ارتباطی کاوش‌رنک"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:63
+msgid "نسخه"
+msgstr "نسخه"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:66
+msgid ""
+"پیکربندی ارتباط امن با پلتفرم مرکزی سئو، کنترل ویرایشگر و قواعد بهینه‌سازی "
+"زنده موتورهای جستجو"
+msgstr ""
+"پیکربندی ارتباط امن با پلتفرم مرکزی سئو، کنترل ویرایشگر و قواعد بهینه‌سازی "
+"زنده موتورهای جستجو"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:71
+msgid "تغییر نحوه نمایش بخش‌ها"
+msgstr "تغییر نحوه نمایش بخش‌ها"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:78
+msgid "نمایش یکپارچه"
+msgstr "نمایش یکپارچه"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:99
+msgid ""
+"تنظیمات با موفقیت ذخیره و در سرور اعمال گردید. تمامی ارتباطات و پارامترها "
+"به‌روزرسانی شدند."
+msgstr ""
+"تنظیمات با موفقیت ذخیره و در سرور اعمال گردید. تمامی ارتباطات و پارامترها "
+"به‌روزرسانی شدند."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:101
+msgid "بستن اعلان"
+msgstr "بستن اعلان"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:123
+msgid "بخش‌های تنظیمات"
+msgstr "بخش‌های تنظیمات"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:144
+msgid "اتصال پلتفرم و احراز هویت"
+msgstr "اتصال پلتفرم و احراز هویت"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:145
+msgid "API Endpoint و کلید امنیتی"
+msgstr "API Endpoint و کلید امنیتی"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:160
+msgid "ویرایشگر و نگارش محتوا"
+msgstr "ویرایشگر و نگارش محتوا"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:161
+msgid "کلاسیک یا بلوکی گوتنبرگ"
+msgstr "کلاسیک یا بلوکی گوتنبرگ"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:176
+msgid "شاخص‌های کیفیت E-E-A-T"
+msgstr "شاخص‌های کیفیت E-E-A-T"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:177
+msgid "نشان اصالت و بازبینی محتوا"
+msgstr "نشان اصالت و بازبینی محتوا"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:191
+msgid "ویجت‌های نرخ تبدیل (CRO)"
+msgstr "ویجت‌های نرخ تبدیل (CRO)"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:192
+msgid "باکس تماس و مشاوره مستقیم"
+msgstr "باکس تماس و مشاوره مستقیم"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:208
+msgid "سئو، اسکیما و لینک‌سازی"
+msgstr "سئو، اسکیما و لینک‌سازی"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:209
+msgid "کدهای ساختاریافته و پیوندها"
+msgstr "کدهای ساختاریافته و پیوندها"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:227
+msgid "فایروال ربات‌های هوش مصنوعی"
+msgstr "فایروال ربات‌های هوش مصنوعی"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:228
+msgid "کنترل robots.txt و اسکرپرها"
+msgstr "کنترل robots.txt و اسکرپرها"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:242
+msgid "شتاب‌دهی و خودترمیمی زنده"
+msgstr "شتاب‌دهی و خودترمیمی زنده"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:243
+msgid "Site Healer و Core Web Vitals"
+msgstr "Site Healer و Core Web Vitals"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:253
+msgid "وضعیت اتصال:"
+msgstr "وضعیت اتصال:"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:255
+msgid "پیکربندی شده"
+msgstr "پیکربندی شده"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:259
+msgid "پروتکل امنیتی:"
+msgstr "پروتکل امنیتی:"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:279
+msgid "اتصال پلتفرم و احراز هویت (Platform Gateway)"
+msgstr "اتصال پلتفرم و احراز هویت (Platform Gateway)"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:280
+msgid ""
+"تنظیم آدرس سرور اصلی و کلید محرمانه رمزنگاری‌شده جهت تبادل امن و لحظه‌ای داده‌ها"
+msgstr ""
+"تنظیم آدرس سرور اصلی و کلید محرمانه رمزنگاری‌شده جهت تبادل امن و لحظه‌ای داده‌ها"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:285
+msgid "فعال و متصل"
+msgstr "فعال و متصل"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:285
+msgid "تکمیل نشده"
+msgstr "تکمیل نشده"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:294
+msgid "آدرس سرور API پلتفرم"
+msgstr "آدرس سرور API پلتفرم"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:297
+msgid "آدرس پایه سرویس هوش مصنوعی کاوش‌رنک جهت همگام‌سازی و تحلیل مداوم سئو."
+msgstr "آدرس پایه سرویس هوش مصنوعی کاوش‌رنک جهت همگام‌سازی و تحلیل مداوم سئو."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:310
+msgid "مثال استاندارد:"
+msgstr "مثال استاندارد:"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:318
+msgid "کلید محرمانه اتصال (Secret Token)"
+msgstr "کلید محرمانه اتصال (Secret Token)"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:321
+msgid ""
+"کلید امنیتی با استاندارد رمزنگاری بالا جهت احراز هویت درخواست‌های تبادل محتوا "
+"و سئو."
+msgstr ""
+"کلید امنیتی با استاندارد رمزنگاری بالا جهت احراز هویت درخواست‌های تبادل محتوا "
+"و سئو."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:334
+msgid "نمایش یا مخفی‌سازی کلید"
+msgstr "نمایش یا مخفی‌سازی کلید"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:342
+msgid "کپی در حافظه"
+msgstr "کپی در حافظه"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:347
+msgid "کپی"
+msgstr "کپی"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:349
+msgid "تولید کلید تصادفی جدید"
+msgstr "تولید کلید تصادفی جدید"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:355
+msgid "تولید مجدد"
+msgstr "تولید مجدد"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:365
+msgid "تست زنده اتصال به سرور (Ping Test)"
+msgstr "تست زنده اتصال به سرور (Ping Test)"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:386
+msgid "ویرایشگر و گردش‌کار نگارش محتوا (Editor Preferences)"
+msgstr "ویرایشگر و گردش‌کار نگارش محتوا (Editor Preferences)"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:387
+msgid ""
+"انتخاب موتور نگارش مقالات جهت هماهنگی حداکثری با کلاینت‌های تولید هوشمند محتوا"
+msgstr ""
+"انتخاب موتور نگارش مقالات جهت هماهنگی حداکثری با کلاینت‌های تولید هوشمند محتوا"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:391
+msgid "ویرایشگر کلاسیک"
+msgstr "ویرایشگر کلاسیک"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:391
+msgid "گوتنبرگ بلوکی"
+msgstr "گوتنبرگ بلوکی"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:398
+msgid "موتور ویرایشگر نوشته‌ها"
+msgstr "موتور ویرایشگر نوشته‌ها"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:400
+msgid ""
+"استفاده از ویرایشگر کلاسیک، پایداری استایل‌های وارد شده از اتوماسیون محتوا را "
+"تضمین می‌کند."
+msgstr ""
+"استفاده از ویرایشگر کلاسیک، پایداری استایل‌های وارد شده از اتوماسیون محتوا را "
+"تضمین می‌کند."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:418
+msgid "غیرفعال‌سازی گوتنبرگ و فعال‌سازی ویرایشگر کلاسیک"
+msgstr "غیرفعال‌سازی گوتنبرگ و فعال‌سازی ویرایشگر کلاسیک"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:419
+msgid "جلوگیری از تغییر ناخواسته بلوک‌های کدهای قالب سئو و جداول اطلاعاتی"
+msgstr "جلوگیری از تغییر ناخواسته بلوک‌های کدهای قالب سئو و جداول اطلاعاتی"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:438
+msgid "شاخص‌های کیفیت و اصالت محتوا (E-E-A-T Signals)"
+msgstr "شاخص‌های کیفیت و اصالت محتوا (E-E-A-T Signals)"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:439
+msgid ""
+"ارزیابی تخصص، تجربه و اعتبار محتوا مطابق به‌روزرسانی‌های هسته الگوریتم‌های گوگل"
+msgstr ""
+"ارزیابی تخصص، تجربه و اعتبار محتوا مطابق به‌روزرسانی‌های هسته الگوریتم‌های گوگل"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:443
+msgid "نشان فعال"
+msgstr "نشان فعال"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:451
+msgid "نمایش نشان اصالت و اعتبارسنجی"
+msgstr "نمایش نشان اصالت و اعتبارسنجی"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:453
+msgid "تزریق باکس بازبینی کیفی و شناسه نویسنده/ویراستار در بالای مقالات وبلاگ."
+msgstr "تزریق باکس بازبینی کیفی و شناسه نویسنده/ویراستار در بالای مقالات وبلاگ."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:471
+msgid "فعال‌سازی نشان اعتماد E-E-A-T در سربرگ مقالات"
+msgstr "فعال‌سازی نشان اعتماد E-E-A-T در سربرگ مقالات"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:472
+msgid "سیگنال مستقیم به موتورهای جستجو مبنی بر کارشناسی بودن محتوا"
+msgstr "سیگنال مستقیم به موتورهای جستجو مبنی بر کارشناسی بودن محتوا"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:482
+msgid "عنوان گواهی یا استاندارد کیفی"
+msgstr "عنوان گواهی یا استاندارد کیفی"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:484
+msgid "متن برچسب استاندارد در هدر مقاله."
+msgstr "متن برچسب استاندارد در هدر مقاله."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:501
+msgid "عنوان تیم یا کارشناس بازبین"
+msgstr "عنوان تیم یا کارشناس بازبین"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:503
+msgid "عنوان هویت کارشناسی ارزیابی‌کننده مقاله برای استناد الگوریتم‌ها."
+msgstr "عنوان هویت کارشناسی ارزیابی‌کننده مقاله برای استناد الگوریتم‌ها."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:528
+msgid "ویجت‌های نرخ تبدیل و تماس مستقیم (CRO Widgets)"
+msgstr "ویجت‌های نرخ تبدیل و تماس مستقیم (CRO Widgets)"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:529
+msgid "هدایت کاربران و بازدیدکنندگان سئو به سمت تماس تلفنی و صفحات فروش خدمات"
+msgstr "هدایت کاربران و بازدیدکنندگان سئو به سمت تماس تلفنی و صفحات فروش خدمات"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:533
+msgid "ویجت فعال"
+msgstr "ویجت فعال"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:541
+msgid "باکس‌های دعوت به اقدام (CTA)"
+msgstr "باکس‌های دعوت به اقدام (CTA)"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:543
+msgid "نمایش باکس شکیل مشاوره و دریافت پیشنهاد قیمت در انتهای مقالات مرتبط."
+msgstr "نمایش باکس شکیل مشاوره و دریافت پیشنهاد قیمت در انتهای مقالات مرتبط."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:561
+msgid "فعال‌سازی بنرهای نرخ تبدیل در بدنه مقالات"
+msgstr "فعال‌سازی بنرهای نرخ تبدیل در بدنه مقالات"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:562
+msgid "افزایش نرخ تبدیل ترافیک ورودی جستجو به تماس مستقیم و لیدهای فروش"
+msgstr "افزایش نرخ تبدیل ترافیک ورودی جستجو به تماس مستقیم و لیدهای فروش"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:572
+msgid "شماره تلفن مستقیم پشتیبانی / فروش"
+msgstr "شماره تلفن مستقیم پشتیبانی / فروش"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:574
+msgid "جهت درج در دکمه تماس با یک کلیک در ویجت مقالات."
+msgstr "جهت درج در دکمه تماس با یک کلیک در ویجت مقالات."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:592
+msgid "آدرس صفحه تماس با ما یا فرم ارتباط"
+msgstr "آدرس صفحه تماس با ما یا فرم ارتباط"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:594
+msgid "مقصد دکمه‌های ثبت سفارش یا مشاوره آنلاین."
+msgstr "مقصد دکمه‌های ثبت سفارش یا مشاوره آنلاین."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:622
+msgid "سئو تکنیکال، اسکیما و پیوندهای داخلی (SEO & Schema)"
+msgstr "سئو تکنیکال، اسکیما و پیوندهای داخلی (SEO & Schema)"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:623
+msgid ""
+"تنظیم ساختار داده‌های معنایی JSON-LD و مدیریت لینک‌سازی خودکار کلمات کلیدی"
+msgstr ""
+"تنظیم ساختار داده‌های معنایی JSON-LD و مدیریت لینک‌سازی خودکار کلمات کلیدی"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:636
+msgid "لینک‌سازی هوشمند داخلی"
+msgstr "لینک‌سازی هوشمند داخلی"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:638
+msgid ""
+"اتصال خودکار کلمات کلیدی موجود در متن به مقالات مرجع، دسته‌بندی‌ها و محصولات."
+msgstr ""
+"اتصال خودکار کلمات کلیدی موجود در متن به مقالات مرجع، دسته‌بندی‌ها و محصولات."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:656
+msgid "فعال‌سازی پیوندسازی خودکار در زمان رندر مقالات"
+msgstr "فعال‌سازی پیوندسازی خودکار در زمان رندر مقالات"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:657
+msgid "افزایش PageRank داخلی و بهبود رتبه‌بندی کلمات کلیدی در سراسر سایت"
+msgstr "افزایش PageRank داخلی و بهبود رتبه‌بندی کلمات کلیدی در سراسر سایت"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:666
+msgid "داده‌های ساختاریافته (Schema.org)"
+msgstr "داده‌های ساختاریافته (Schema.org)"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:668
+msgid ""
+"تولید و تزریق خودکار اسکیماهای استاندارد Article و FAQPage در سربرگ مقالات."
+msgstr ""
+"تولید و تزریق خودکار اسکیماهای استاندارد Article و FAQPage در سربرگ مقالات."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:686
+msgid "تزریق هوشمند داده‌های ساختاریافته JSON-LD"
+msgstr "تزریق هوشمند داده‌های ساختاریافته JSON-LD"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:687
+msgid ""
+"نمایش ریچ‌اسنیپت‌ها (سوالات متداول، تاریخ انتشار، تصاویر) در نتایج جستجوی گوگل"
+msgstr ""
+"نمایش ریچ‌اسنیپت‌ها (سوالات متداول، تاریخ انتشار، تصاویر) در نتایج جستجوی گوگل"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:696
+msgid "بهینه‌سازی اسکیمای محصولات ووکامرس"
+msgstr "بهینه‌سازی اسکیمای محصولات ووکامرس"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:698
+msgid ""
+"پاکسازی خطاهای اسکیمای پیش‌فرض ووکامرس (مانند فقدان برند، قیمت و کد کالا)."
+msgstr ""
+"پاکسازی خطاهای اسکیمای پیش‌فرض ووکامرس (مانند فقدان برند، قیمت و کد کالا)."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:716
+msgid "اصلاح ساختار داده‌های اسکیمای محصول (Product Schema)"
+msgstr "اصلاح ساختار داده‌های اسکیمای محصول (Product Schema)"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:717
+msgid "رفع خطاهای رایج Google Search Console در بخش محصولات فروشگاه"
+msgstr "رفع خطاهای رایج Google Search Console در بخش محصولات فروشگاه"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:726
+msgid "اسکیمای سئوی محلی (LocalBusiness Schema)"
+msgstr "اسکیمای سئوی محلی (LocalBusiness Schema)"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:728
+msgid ""
+"تولید داده‌های ساختاریافته کسب‌وکار محلی بر اساس مشخصات رسمی ثبت‌شده فروشگاه "
+"برای گوگل."
+msgstr ""
+"تولید داده‌های ساختاریافته کسب‌وکار محلی بر اساس مشخصات رسمی ثبت‌شده فروشگاه "
+"برای گوگل."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:746
+msgid "فعال‌سازی سئوی محلی و کارت دانش کسب‌وکار (Google Knowledge Panel)"
+msgstr "فعال‌سازی سئوی محلی و کارت دانش کسب‌وکار (Google Knowledge Panel)"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:747
+msgid "تنها در صورت تکمیل نام کسب‌وکار، نشانی و شماره تماس درج خواهد شد."
+msgstr "تنها در صورت تکمیل نام کسب‌وکار، نشانی و شماره تماس درج خواهد شد."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:757
+msgid "نام رسمی کسب‌وکار یا برند"
+msgstr "نام رسمی کسب‌وکار یا برند"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:759
+msgid "نام تجاری جهت درج در فیلد name اسکیما."
+msgstr "نام تجاری جهت درج در فیلد name اسکیما."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:777
+msgid "نوع کسب‌وکار (Schema.org Subtype)"
+msgstr "نوع کسب‌وکار (Schema.org Subtype)"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:779
+msgid "مانند LocalBusiness، Store، ProfessionalService و غیره."
+msgstr "مانند LocalBusiness، Store، ProfessionalService و غیره."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:797
+msgid "تلفن تماس کسب‌وکار"
+msgstr "تلفن تماس کسب‌وکار"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:799
+msgid "شماره تلفن رسمی کسب‌وکار جهت درج در اسکیما."
+msgstr "شماره تلفن رسمی کسب‌وکار جهت درج در اسکیما."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:817
+msgid "نشانی دقیق خیابان (Street Address)"
+msgstr "نشانی دقیق خیابان (Street Address)"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:819
+msgid "آدرس فیزیکی دفتر یا فروشگاه."
+msgstr "آدرس فیزیکی دفتر یا فروشگاه."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:827
+msgid "تهران، خیابان ولیعصر..."
+msgstr "تهران، خیابان ولیعصر..."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:837
+msgid "شهر و استان"
+msgstr "شهر و استان"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:839
+msgid "تفکیک شهر و استان برای استاندارد PostalAddress."
+msgstr "تفکیک شهر و استان برای استاندارد PostalAddress."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:847
+msgid "شهر (مثلا تهران)"
+msgstr "شهر (مثلا تهران)"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:855
+msgid "استان (مثلا تهران)"
+msgstr "استان (مثلا تهران)"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:865
+msgid "کد پستی و کشور"
+msgstr "کد پستی و کشور"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:867
+msgid "کد پستی ۱۰ رقمی و کد کشور (مثلا IR)."
+msgstr "کد پستی ۱۰ رقمی و کد کشور (مثلا IR)."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:875
+msgid "کد پستی ۱۰ رقمی"
+msgstr "کد پستی ۱۰ رقمی"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:893
+msgid "مختصات جغرافیایی (Geo Coordinates)"
+msgstr "مختصات جغرافیایی (Geo Coordinates)"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:895
+msgid "عرض و طول جغرافیایی برای نمایش در نقشه گوگل."
+msgstr "عرض و طول جغرافیایی برای نمایش در نقشه گوگل."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:903
+msgid "Latitude (مثلا 35.7219)"
+msgstr "Latitude (مثلا 35.7219)"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:911
+msgid "Longitude (مثلا 51.3347)"
+msgstr "Longitude (مثلا 51.3347)"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:921
+msgid "ساعات کاری (Opening Hours)"
+msgstr "ساعات کاری (Opening Hours)"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:923
+msgid "فرمت استاندارد (مثلا Mo-Fr 08:30-18:30, Sa 08:30-14:00)."
+msgstr "فرمت استاندارد (مثلا Mo-Fr 08:30-18:30, Sa 08:30-14:00)."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:940
+msgid "آدرس آیکون یا لوگوی اختصاصی (Logo URL)"
+msgstr "آدرس آیکون یا لوگوی اختصاصی (Logo URL)"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:942
+msgid "در صورت خالی بودن، لوگوی پیش‌فرض قالب یا آیکون سایت درج خواهد شد."
+msgstr "در صورت خالی بودن، لوگوی پیش‌فرض قالب یا آیکون سایت درج خواهد شد."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:959
+msgid "محدوده قیمت (Price Range)"
+msgstr "محدوده قیمت (Price Range)"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:961
+msgid "شاخص محدوده قیمتی خدمات یا محصولات (مثلا $ یا $$ یا $$$)."
+msgstr "شاخص محدوده قیمتی خدمات یا محصولات (مثلا $ یا $$ یا $$$)."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:991
+msgid "فایروال خزنده‌ها و ربات‌های هوش مصنوعی (AI Bots Governor)"
+msgstr "فایروال خزنده‌ها و ربات‌های هوش مصنوعی (AI Bots Governor)"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:992
+msgid ""
+"پیکربندی هوشمند فایروال robots.txt و محافظت از منابع پردازنده و پهنای‌باند "
+"سرور"
+msgstr ""
+"پیکربندی هوشمند فایروال robots.txt و محافظت از منابع پردازنده و پهنای‌باند "
+"سرور"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:996
+msgid "فایروال فعال"
+msgstr "فایروال فعال"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1004
+msgid "فایروال مسدودسازی زنده ترافیک مخرب"
+msgstr "فایروال مسدودسازی زنده ترافیک مخرب"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1006
+msgid ""
+"قطع ارتباط فوری و خودکار اسکرپرهای سنگین قبل از اجرای کدهای سنگین PHP و "
+"دیتابیس."
+msgstr ""
+"قطع ارتباط فوری و خودکار اسکرپرهای سنگین قبل از اجرای کدهای سنگین PHP و "
+"دیتابیس."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1024
+msgid "فعال‌سازی فایروال سروری ربات‌ها (Live Bot Firewall)"
+msgstr "فعال‌سازی فایروال سروری ربات‌ها (Live Bot Firewall)"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1025
+msgid "کاهش بار پردازشی سرور و مهار خزنده‌های بدون ورودی ترافیک"
+msgstr "کاهش بار پردازشی سرور و مهار خزنده‌های بدون ورودی ترافیک"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1034
+msgid "حالت سیاست‌گذاری ربات‌ها (Preset)"
+msgstr "حالت سیاست‌گذاری ربات‌ها (Preset)"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1036
+msgid ""
+"انتخاب شیوه برخورد با موتورهای جستجوی هوش مصنوعی (Perplexity, ChatGPT, "
+"Gemini, Copilot)."
+msgstr ""
+"انتخاب شیوه برخورد با موتورهای جستجوی هوش مصنوعی (Perplexity, ChatGPT, "
+"Gemini, Copilot)."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1051
+msgid "متعادل (پیشنهادی)"
+msgstr "متعادل (پیشنهادی)"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1053
+msgid "پیش‌فرض"
+msgstr "پیش‌فرض"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1056
+msgid ""
+"اجازه به خزنده‌های استناد هوش مصنوعی جهت افزایش ترافیک، و مسدودسازی اسکرپرهای "
+"سنگین و بی‌استفاده."
+msgstr ""
+"اجازه به خزنده‌های استناد هوش مصنوعی جهت افزایش ترافیک، و مسدودسازی اسکرپرهای "
+"سنگین و بی‌استفاده."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1070
+msgid "باز و تعاملی"
+msgstr "باز و تعاملی"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1072
+msgid "حداکثر ایندکس"
+msgstr "حداکثر ایندکس"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1075
+msgid ""
+"دسترسی تمام ربات‌های هوش مصنوعی و خزنده‌ها به تمام محتواها؛ مناسب سایت‌های "
+"اطلاع‌رسانی عمومی."
+msgstr ""
+"دسترسی تمام ربات‌های هوش مصنوعی و خزنده‌ها به تمام محتواها؛ مناسب سایت‌های "
+"اطلاع‌رسانی عمومی."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1089
+msgid "محافظت کامل"
+msgstr "محافظت کامل"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1091
+msgid "سخت‌گیرانه"
+msgstr "سخت‌گیرانه"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1094
+msgid ""
+"مسدودسازی تمام ربات‌های آموزش LLM و خزنده‌های متفرقه هوش مصنوعی جهت حفظ کامل "
+"محرمانگی."
+msgstr ""
+"مسدودسازی تمام ربات‌های آموزش LLM و خزنده‌های متفرقه هوش مصنوعی جهت حفظ کامل "
+"محرمانگی."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1104
+msgid "پیش‌نمایش زنده virtual robots.txt"
+msgstr "پیش‌نمایش زنده virtual robots.txt"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1106
+msgid "قوانین اعمال‌شده لحظه‌ای که توسط وردپرس به خزنده‌ها ارسال می‌شوند."
+msgstr "قوانین اعمال‌شده لحظه‌ای که توسط وردپرس به خزنده‌ها ارسال می‌شوند."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1118
+msgid "کپی قوانین"
+msgstr "کپی قوانین"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1138
+msgid "شتاب‌دهی و خودترمیمی زنده سایت (Site Healer)"
+msgstr "شتاب‌دهی و خودترمیمی زنده سایت (Site Healer)"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1139
+msgid ""
+"بهینه‌سازی کدهای HTML خروجی، بهبود شاخص‌های سرعت Core Web Vitals و تصحیح تگ‌های "
+"ضروری"
+msgstr ""
+"بهینه‌سازی کدهای HTML خروجی، بهبود شاخص‌های سرعت Core Web Vitals و تصحیح تگ‌های "
+"ضروری"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1144
+msgid "بهینه‌ساز فعال"
+msgstr "بهینه‌ساز فعال"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1152
+msgid "پیش‌بارگذاری فونت و ارتباطات سریع (Preload)"
+msgstr "پیش‌بارگذاری فونت و ارتباطات سریع (Preload)"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1154
+msgid ""
+"تزریق خودکار تگ‌های Preconnect و Preload فونت وزیرمتن در سربرگ صفحات برای رفع "
+"تاخیر نمایش متن (FOIT)."
+msgstr ""
+"تزریق خودکار تگ‌های Preconnect و Preload فونت وزیرمتن در سربرگ صفحات برای رفع "
+"تاخیر نمایش متن (FOIT)."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1172
+msgid "پیش‌بارگذاری فونت فارسی استاندارد و اتصالات CDN"
+msgstr "پیش‌بارگذاری فونت فارسی استاندارد و اتصالات CDN"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1173
+msgid "کاهش زمان بارگذاری Largest Contentful Paint (LCP) و جهش چیدمان (CLS)"
+msgstr "کاهش زمان بارگذاری Largest Contentful Paint (LCP) و جهش چیدمان (CLS)"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1182
+msgid "بازنویسی هوشمند فرمت تصاویر به WebP"
+msgstr "بازنویسی هوشمند فرمت تصاویر به WebP"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1184
+msgid ""
+"جایگزینی خودکار تصاویر موجود در متن مقالات با نسخه سبک WebP در صورت وجود "
+"فایل در هاست."
+msgstr ""
+"جایگزینی خودکار تصاویر موجود در متن مقالات با نسخه سبک WebP در صورت وجود "
+"فایل در هاست."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1202
+msgid "شتاب‌بخشی لود تصاویر رسانه‌ها"
+msgstr "شتاب‌بخشی لود تصاویر رسانه‌ها"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1203
+msgid "کاهش چشمگیر حجم دانلود صفحه در دستگاه‌های موبایل"
+msgstr "کاهش چشمگیر حجم دانلود صفحه در دستگاه‌های موبایل"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1212
+msgid "پاکسازی داده‌ها هنگام حذف افزونه"
+msgstr "پاکسازی داده‌ها هنگام حذف افزونه"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1214
+msgid ""
+"با فعال‌سازی این گزینه، با حذف نهایی (Uninstall) افزونه از وردپرس، تمامی "
+"تنظیمات، جداول پایگاه‌داده و متادیتاهای کاوش‌رنک به طور برگشت‌ناپذیر پاکسازی "
+"می‌شوند."
+msgstr ""
+"با فعال‌سازی این گزینه، با حذف نهایی (Uninstall) افزونه از وردپرس، تمامی "
+"تنظیمات، جداول پایگاه‌داده و متادیتاهای کاوش‌رنک به طور برگشت‌ناپذیر پاکسازی "
+"می‌شوند."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1232
+msgid "حذف کامل داده‌ها و تنظیمات هنگام Uninstall"
+msgstr "حذف کامل داده‌ها و تنظیمات هنگام Uninstall"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1233
+msgid ""
+"پاکسازی جدول‌ها، آپشن‌های kavoshrank_ و متادیتاها در زمان حذف نهایی افزونه"
+msgstr ""
+"پاکسازی جدول‌ها، آپشن‌های kavoshrank_ و متادیتاها در زمان حذف نهایی افزونه"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1247
+msgid "تنظیمات بلافاصله پس از ذخیره روی موتور فعال وردپرس اعمال خواهند شد."
+msgstr "تنظیمات بلافاصله پس از ذخیره روی موتور فعال وردپرس اعمال خواهند شد."
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1249
+msgid "تغییرات ذخیره‌نشده دارید"
+msgstr "تغییرات ذخیره‌نشده دارید"
+
+
+#: wp/plugins/kavoshrank/admin/views/settings.php:1260
+msgid "ذخیره تغییرات پیکربندی"
+msgstr "ذخیره تغییرات پیکربندی"
+
+
+#: wp/plugins/kavoshrank/kavoshrank.php:40
+msgid "KavoshRank SEO Client requires PHP 8.1 or higher."
+msgstr "کلاینت سئو کاوش‌رنک به پی‌اچ‌پی نسخه ۸.۱ یا بالاتر نیاز دارد."
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:120
+msgid "ووکامرس نصب/فعال نیست"
+msgstr "ووکامرس نصب/فعال نیست"
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:143
+msgid "ویرایشگر بلوکی پیش‌فرض وردپرس"
+msgstr "ویرایشگر بلوکی پیش‌فرض وردپرس"
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:211
+msgid "میانبرهای پرکاربرد جهت مدیریت محتوا، بررسی ارتباط و تنظیمات پلتفرم"
+msgstr "میانبرهای پرکاربرد جهت مدیریت محتوا، بررسی ارتباط و تنظیمات پلتفرم"
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:267
+msgid "ورود به پنل مرکزی کاوش‌رنک"
+msgstr "ورود به پنل مرکزی کاوش‌رنک"
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:287
+msgid "کش هوشمند بافرهای خروجی و کاهش بار سرور"
+msgstr "کش هوشمند بافرهای خروجی و کاهش بار سرور"
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:291
+msgid "پیش‌بارگذاری فونت‌ها و المان‌های حیاتی LCP"
+msgstr "پیش‌بارگذاری فونت‌ها و المان‌های حیاتی LCP"
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:295
+msgid "جایگزینی و تبدیل خودکار به تصاویر WebP"
+msgstr "جایگزینی و تبدیل خودکار به تصاویر WebP"
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:299
+msgid "تزریق هوشمند ویژگی‌های Alt و برچسب‌های دسترس‌پذیری"
+msgstr "تزریق هوشمند ویژگی‌های Alt و برچسب‌های دسترس‌پذیری"
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:304
+msgid "پیکربندی Site Healer"
+msgstr "پیکربندی Site Healer"
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:321
+msgid "اتوماسیون محتوا و سئو معنایی"
+msgstr "اتوماسیون محتوا و سئو معنایی"
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:322
+msgid "SEO Engine"
+msgstr "موتور سئو"
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:324
+msgid "Schema.org و استانداردهای رتبه‌بندی"
+msgstr "Schema.org و استانداردهای رتبه‌بندی"
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:329
+msgid "تولید ساختار معنایی Schema مقالات و محصولات"
+msgstr "تولید ساختار معنایی Schema مقالات و محصولات"
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:333
+msgid "مهار هوشمند خزنده‌های هوش مصنوعی (AI Bots Governor)"
+msgstr "مهار هوشمند خزنده‌های هوش مصنوعی (AI Bots Governor)"
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:337
+msgid "باکس اعتبارسنجی تخصص و تجربه تحریریه (E-E-A-T)"
+msgstr "باکس اعتبارسنجی تخصص و تجربه تحریریه (E-E-A-T)"
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:341
+msgid "لینک‌سازی هوشمند خودکار در کلمات کلیدی هدف"
+msgstr "لینک‌سازی هوشمند خودکار در کلمات کلیدی هدف"
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:346
+msgid "پیکربندی اسکیما و سئو"
+msgstr "پیکربندی اسکیما و سئو"
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:363
+msgid "امنیت و ارتباط پلتفرم مرکزی"
+msgstr "امنیت و ارتباط پلتفرم مرکزی"
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:364
+msgid "Secure Gateway"
+msgstr "دروازه امنیتی"
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:366
+msgid "ارتباط رمزنگاری‌شده و پایش سلامت"
+msgstr "ارتباط رمزنگاری‌شده و پایش سلامت"
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:371
+msgid "کلید امنیتی اتصال اختصاصی (Secret Token Guard)"
+msgstr "کلید امنیتی اتصال اختصاصی (Secret Token Guard)"
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:375
+msgid "اتصال پرسرعت به سرور بک‌اند مرکزی Go"
+msgstr "اتصال پرسرعت به سرور بک‌اند مرکزی Go"
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:379
+msgid "فونت‌های کاملاً لوکال با صفر وابستگی به CDN خارجی"
+msgstr "فونت‌های کاملاً لوکال با صفر وابستگی به CDN خارجی"
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:383
+msgid "پایش لحظه‌ای تاخیر و پینگ سرور (Real-time Telemetry)"
+msgstr "پایش لحظه‌ای تاخیر و پینگ سرور (Real-time Telemetry)"
+
+#: wp/plugins/kavoshrank/admin/views/dashboard.php:388
+msgid "مدیریت کلید امنیتی"
+msgstr "مدیریت کلید امنیتی"
+
+#: wp/plugins/kavoshrank/admin/class-kavoshrank-admin-pages.php:375
+msgid "عدم موفقیت در برقراری ارتباط با سرور (کد وضعیت: HTTP %d)."
+msgstr "عدم موفقیت در برقراری ارتباط با سرور (کد وضعیت: HTTP %d)."
+
+
+
