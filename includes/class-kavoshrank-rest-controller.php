@@ -468,9 +468,14 @@ class KavoshRank_REST_Controller {
                 }
             }
 
+            $raw_content = ! empty( $p->post_content ) ? $p->post_content : $p->post_excerpt;
+            $clean_content = wp_strip_all_tags( strip_shortcodes( $raw_content ) );
+            $clean_content = preg_replace( '/\s+/', ' ', trim( $clean_content ) );
+
             $articles[] = array(
                 'id'        => $p->ID,
                 'title'     => $p->post_title,
+                'content'   => $clean_content,
                 'has_audio' => $has_audio,
                 'audio_url' => $has_audio ? (string) $audio_url : '',
                 'duration'  => $duration,
