@@ -96,10 +96,10 @@ jobs:
 
           RELEASE_BODY="### KavoshRank WordPress Plugin - Latest Release (v${VERSION})
 
-Direct Download: [kavoshrank.zip](https://github.com/Kavoshrank/wordpress/releases/download/latest/kavoshrank.zip)
+          Direct Download: [kavoshrank.zip](https://github.com/Kavoshrank/wordpress/releases/download/latest/kavoshrank.zip)
 
-This release always points to the most recent stable release of the KavoshRank WordPress Plugin.
-For version-specific release notes and checksums, see [Release ${TAG}](https://github.com/Kavoshrank/wordpress/releases/tag/${TAG})."
+          This release always points to the most recent stable release of the KavoshRank WordPress Plugin.
+          For version-specific release notes and checksums, see [Release ${TAG}](https://github.com/Kavoshrank/wordpress/releases/tag/${TAG})."
 
           gh release delete latest --yes || true
 

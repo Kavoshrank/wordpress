@@ -30,9 +30,9 @@ jobs:
             echo "Policy violation: contributor ${AUTHOR} has ${COUNT} open PRs."
             COMMENT="Thank you for your interest in contributing to KavoshRank. 
 
-According to our contribution policy, each contributor is allowed only **one open pull request at a time**. 
+            According to our contribution policy, each contributor is allowed only **one open pull request at a time**. 
 
-You already have an active open pull request. Please wait until your existing pull request is reviewed and merged before opening a new one. Closing this pull request automatically."
+            You already have an active open pull request. Please wait until your existing pull request is reviewed and merged before opening a new one. Closing this pull request automatically."
 
             gh pr comment "${CURRENT_PR}" --body "${COMMENT}"
             gh pr close "${CURRENT_PR}"
