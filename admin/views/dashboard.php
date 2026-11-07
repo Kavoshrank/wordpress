@@ -70,7 +70,7 @@ $kr_has_update   = $kr_remote_info && ! empty( $kr_remote_info['version'] ) && v
     </header>
 
     <?php if ( $kr_has_update ) :
-        $package_url = ! empty( $kr_remote_info['package'] ) ? $kr_remote_info['package'] : ( ! empty( $kr_remote_info['download_url'] ) ? $kr_remote_info['download_url'] : 'https://kavoshrank.ir/download/kavoshrank-connector.zip' );
+        $package_url = ! empty( $kr_remote_info['package'] ) ? $kr_remote_info['package'] : ( ! empty( $kr_remote_info['download_url'] ) ? $kr_remote_info['download_url'] : 'https://github.com/Kavoshrank/wordpress/releases/latest/download/kavoshrank.zip' );
         $update_url  = wp_nonce_url(
             self_admin_url( 'update.php?action=upgrade-plugin&plugin=' . urlencode( KavoshRank_Updater::PLUGIN_BASENAME ) ),
             'upgrade-plugin_' . KavoshRank_Updater::PLUGIN_BASENAME

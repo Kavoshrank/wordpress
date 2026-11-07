@@ -328,7 +328,7 @@ class KavoshRank_Updater {
             return;
         }
 
-        $package_url = ! empty( $remote_info['package'] ) ? $remote_info['package'] : ( ! empty( $remote_info['download_url'] ) ? $remote_info['download_url'] : 'https://kavoshrank.ir/download/kavoshrank-connector.zip' );
+        $package_url = ! empty( $remote_info['package'] ) ? $remote_info['package'] : ( ! empty( $remote_info['download_url'] ) ? $remote_info['download_url'] : 'https://github.com/Kavoshrank/wordpress/releases/latest/download/kavoshrank.zip' );
         $update_url  = wp_nonce_url(
             self_admin_url( 'update.php?action=upgrade-plugin&plugin=' . urlencode( self::PLUGIN_BASENAME ) ),
             'upgrade-plugin_' . self::PLUGIN_BASENAME
