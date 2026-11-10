@@ -228,6 +228,15 @@ class KavoshRank_Media_REST_Handler {
             $file_info = $_FILES['image'];
         }
 
+        $upload_err_code = 0;
+        if ( empty( $file_info ) ) {
+            if ( isset( $files['file']['error'] ) && $files['file']['error'] !== UPLOAD_ERR_OK && $files['file']['error'] !== UPLOAD_ERR_NO_FILE ) {
+                $upload_err_code = (int) $files['file']['error'];
+            } elseif ( isset( $_FILES['file']['error'] ) && $_FILES['file']['error'] !== UPLOAD_ERR_OK && $_FILES['file']['error'] !== UPLOAD_ERR_NO_FILE ) {
+                $upload_err_code = (int) $_FILES['file']['error'];
+            }
+        }
+
         if ( ! empty( $file_info ) && ! empty( $file_info['tmp_name'] ) ) {
             if ( ! empty( $file_info['size'] ) && $file_info['size'] > self::MAX_FILE_SIZE ) {
                 return new WP_REST_Response( array( 'error' => 'File size exceeds 15 MB limit' ), 413 );
@@ -254,6 +263,9 @@ class KavoshRank_Media_REST_Handler {
         // Mode B: Base64 file data (via JSON body or POST form parameter)
         else {
             $file_b64 = $params['file_b64'] ?? ( $request->get_param( 'file_b64' ) ?? '' );
+            if ( empty( $file_b64 ) && isset( $_POST['file_b64'] ) ) {
+                $file_b64 = (string) $_POST['file_b64'];
+            }
             if ( ! empty( $file_b64 ) ) {
                 $filename = sanitize_file_name( $params['filename'] ?? ( $request->get_param( 'filename' ) ?? ( 'upload-' . time() . '.jpg' ) ) );
                 if ( preg_match( '/^data:(image|audio)\/([\w-]+);base64,(.*)$/s', $file_b64, $m ) ) {
@@ -285,6 +297,18 @@ class KavoshRank_Media_REST_Handler {
 
                 $file_path = $upload_dir['path'] . '/' . wp_unique_filename( $upload_dir['path'], $filename );
                 @file_put_contents( $file_path, $decoded_bytes );
+            } elseif ( $upload_err_code === 1 || $upload_err_code === 2 ) {
+                return new WP_REST_Response( array(
+                    'error' => 'حجم فایل ارسالی از سقف مجاز آپلود در تنظیمات PHP سرور وردپرس (upload_max_filesize) بیشتر است.',
+                    'code'  => 'upload_max_filesize',
+                    'upload_error_code' => $upload_err_code
+                ), 413 );
+            } elseif ( $upload_err_code === 3 ) {
+                return new WP_REST_Response( array(
+                    'error' => 'فایل به صورت ناقص به سرور وردپرس رسید (upload_partial).',
+                    'code'  => 'upload_partial',
+                    'upload_error_code' => $upload_err_code
+                ), 400 );
             } else {
                 return new WP_REST_Response( array( 'error' => 'No file or file_b64 provided in request' ), 400 );
             }
@@ -439,6 +463,41 @@ class KavoshRank_Media_REST_Handler {
                 if ( $duration_sec > 0 ) {
                     update_post_meta( $post_id, '_kavoshrank_audio_duration', $duration_sec );
                     update_post_meta( $post_id, '_kavoshrank_audio_duration_str', $duration_str );
+                }
+
+                $audio_theme = $request->get_param( 'audio_theme' );
+                if ( empty( $audio_theme ) && ! empty( $_POST['audio_theme'] ) ) {
+                    $audio_theme = sanitize_text_field( $_POST['audio_theme'] );
+                }
+                if ( ! empty( $audio_theme ) ) {
+                    update_post_meta( $post_id, '_kavoshrank_audio_theme', sanitize_text_field( $audio_theme ) );
+                    update_option( 'kavoshrank_audio_player_theme', sanitize_text_field( $audio_theme ) );
+                }
+
+                $audio_voice = $request->get_param( 'audio_voice' );
+                if ( empty( $audio_voice ) && ! empty( $_POST['audio_voice'] ) ) {
+                    $audio_voice = sanitize_text_field( $_POST['audio_voice'] );
+                }
+                if ( ! empty( $audio_voice ) ) {
+                    update_post_meta( $post_id, '_kavoshrank_audio_voice', sanitize_text_field( $audio_voice ) );
+                    update_option( 'kavoshrank_audio_speaker_voice', sanitize_text_field( $audio_voice ) );
+                }
+
+                $audio_speed = $request->get_param( 'audio_speed' );
+                if ( empty( $audio_speed ) && ! empty( $_POST['audio_speed'] ) ) {
+                    $audio_speed = sanitize_text_field( $_POST['audio_speed'] );
+                }
+                if ( ! empty( $audio_speed ) ) {
+                    update_post_meta( $post_id, '_kavoshrank_audio_speed', sanitize_text_field( $audio_speed ) );
+                    update_option( 'kavoshrank_audio_speech_rate', sanitize_text_field( $audio_speed ) );
+                }
+
+                $audio_auto_insert = $request->get_param( 'audio_auto_insert' );
+                if ( empty( $audio_auto_insert ) && isset( $_POST['audio_auto_insert'] ) ) {
+                    $audio_auto_insert = sanitize_text_field( $_POST['audio_auto_insert'] );
+                }
+                if ( ! empty( $audio_auto_insert ) || '0' === $audio_auto_insert ) {
+                    update_post_meta( $post_id, '_kavoshrank_audio_auto_insert', sanitize_text_field( $audio_auto_insert ) );
                 }
             }
         }

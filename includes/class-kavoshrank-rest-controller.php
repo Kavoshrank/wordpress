@@ -298,6 +298,20 @@ class KavoshRank_REST_Controller {
                 'callback'            => array( $this, 'handle_get_ai_readiness_audit' ),
                 'permission_callback' => array( $this, 'verify_token_permission' ),
             ) );
+
+            // 19. Audio Player & Podcast Settings Endpoints
+            register_rest_route( $namespace, '/audio-settings', array(
+                array(
+                    'methods'             => WP_REST_Server::READABLE,
+                    'callback'            => array( $this, 'handle_get_audio_settings' ),
+                    'permission_callback' => array( $this, 'verify_token_permission' ),
+                ),
+                array(
+                    'methods'             => WP_REST_Server::CREATABLE,
+                    'callback'            => array( $this, 'handle_update_audio_settings' ),
+                    'permission_callback' => array( $this, 'verify_token_permission' ),
+                ),
+            ) );
         }
     }
 
@@ -642,6 +656,56 @@ class KavoshRank_REST_Controller {
                 'llms_txt_url'         => home_url( '/llms.txt' ),
                 'bot_firewall_enabled' => $bot_firewall,
                 'bot_preset'           => $bot_preset,
+            ),
+        ), 200 );
+    }
+
+    /**
+     * Handler for GET /wp-json/kavoshrank/v1/audio-settings
+     */
+    public function handle_get_audio_settings( WP_REST_Request $request ) {
+        return new WP_REST_Response( array(
+            'player_theme'       => get_option( 'kavoshrank_audio_player_theme', 'glassmorphic' ),
+            'speaker_voice'      => get_option( 'kavoshrank_audio_speaker_voice', 'Puck' ),
+            'speech_rate'        => (float) get_option( 'kavoshrank_audio_speech_rate', '1.0' ),
+            'auto_insert_player' => get_option( 'kavoshrank_audio_auto_insert', '1' ) !== '0',
+        ), 200 );
+    }
+
+    /**
+     * Handler for POST /wp-json/kavoshrank/v1/audio-settings
+     */
+    public function handle_update_audio_settings( WP_REST_Request $request ) {
+        $params = $request->get_json_params();
+        if ( empty( $params ) ) {
+            $params = $request->get_params();
+        }
+
+        if ( isset( $params['player_theme'] ) ) {
+            $theme = sanitize_text_field( $params['player_theme'] );
+            if ( in_array( $theme, array( 'glassmorphic', 'minimal', 'waveform' ), true ) ) {
+                update_option( 'kavoshrank_audio_player_theme', $theme );
+            }
+        }
+        if ( isset( $params['speaker_voice'] ) ) {
+            update_option( 'kavoshrank_audio_speaker_voice', sanitize_text_field( $params['speaker_voice'] ) );
+        }
+        if ( isset( $params['speech_rate'] ) ) {
+            update_option( 'kavoshrank_audio_speech_rate', sanitize_text_field( $params['speech_rate'] ) );
+        }
+        if ( isset( $params['auto_insert_player'] ) ) {
+            $auto = $params['auto_insert_player'] ? '1' : '0';
+            update_option( 'kavoshrank_audio_auto_insert', $auto );
+        }
+
+        return new WP_REST_Response( array(
+            'success' => true,
+            'message' => 'Audio player settings updated successfully.',
+            'settings' => array(
+                'player_theme'       => get_option( 'kavoshrank_audio_player_theme', 'glassmorphic' ),
+                'speaker_voice'      => get_option( 'kavoshrank_audio_speaker_voice', 'Puck' ),
+                'speech_rate'        => (float) get_option( 'kavoshrank_audio_speech_rate', '1.0' ),
+                'auto_insert_player' => get_option( 'kavoshrank_audio_auto_insert', '1' ) !== '0',
             ),
         ), 200 );
     }

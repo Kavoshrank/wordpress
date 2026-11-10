@@ -3,7 +3,7 @@
  * Plugin Name:       KavoshRank SEO Client
  * Plugin URI:        https://kavoshrank.ir
  * Description:       Lightweight WordPress Client for KavoshRank AI SEO & Content Automation Master Engine.
- * Version:           1.0.2
+ * Version:           1.0.3
  * Requires at least: 6.4
  * Requires PHP:      8.1
  * Author:            KavoshRank Team
@@ -23,7 +23,7 @@ if ( defined( 'KAVOSHRANK_LOADED' ) ) {
 define( 'KAVOSHRANK_LOADED', true );
 
 if ( ! defined( 'KAVOSHRANK_VERSION' ) ) {
-    define( 'KAVOSHRANK_VERSION', '1.0.2' );
+    define( 'KAVOSHRANK_VERSION', '1.0.3' );
 }
 if ( ! defined( 'KAVOSHRANK_DB_VERSION' ) ) {
     define( 'KAVOSHRANK_DB_VERSION', '1.0.0' );

@@ -70,7 +70,7 @@ class KavoshRank_Client {
         $bot_governor->init();
 
         $audio_player = new KavoshRank_Audio_Player();
-        add_filter( 'the_content', array( $audio_player, 'render_single_podcast_player' ) );
+        $audio_player->init();
 
         $copilot = new KavoshRank_Copilot();
         $copilot->init();
