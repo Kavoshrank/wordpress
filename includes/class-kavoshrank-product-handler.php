@@ -388,6 +388,10 @@ class KavoshRank_Product_REST_Handler {
             }
         }
 
+        // Tag product as KavoshRank generated
+        update_post_meta( $product_id, '_kavoshrank_generated', '1' );
+        update_post_meta( $product_id, '_kavoshrank_article_id', (string) $product_id );
+
         // Meta tags & Yoast SEO
         if ( ! empty( $focus_kw ) ) {
             update_post_meta( $product_id, '_yoast_wpseo_focuskw', $focus_kw );

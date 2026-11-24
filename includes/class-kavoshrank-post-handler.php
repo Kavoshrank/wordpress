@@ -118,6 +118,56 @@ class KavoshRank_Post_REST_Handler {
         $status         = sanitize_text_field( $request->get_param( 'status' ) ?: 'any' );
         $requested_type = sanitize_text_field( $request->get_param( 'post_type' ) ?: 'all' );
 
+        $only_generated_param = $request->get_param( 'only_generated' );
+        if ( $only_generated_param === null ) {
+            $only_generated_param = $request->get_param( 'generated_only' );
+        }
+        $only_generated = ( $only_generated_param === '1' || $only_generated_param === 'true' || $only_generated_param === 1 || $only_generated_param === true );
+
+        $generated_meta_query = array(
+            'relation' => 'OR',
+            array(
+                'key'     => '_kavoshrank_generated',
+                'compare' => 'EXISTS',
+            ),
+            array(
+                'key'     => '_kavoshrank_article_id',
+                'compare' => 'EXISTS',
+            ),
+            array(
+                'key'     => '_kavoshrank_content_matrix_dimension',
+                'compare' => 'EXISTS',
+            ),
+            array(
+                'key'     => '_kavoshrank_pillar_category',
+                'compare' => 'EXISTS',
+            ),
+            array(
+                'key'     => '_kavoshrank_sub_category',
+                'compare' => 'EXISTS',
+            ),
+            array(
+                'key'     => '_kavoshrank_product_specs',
+                'compare' => 'EXISTS',
+            ),
+            array(
+                'key'     => '_kavoshrank_related_product_id',
+                'compare' => 'EXISTS',
+            ),
+            array(
+                'key'     => '_kavoshrank_related_post_id',
+                'compare' => 'EXISTS',
+            ),
+            array(
+                'key'     => '_tsw_generated',
+                'compare' => 'EXISTS',
+            ),
+            array(
+                'key'     => '_tsw_article_id',
+                'compare' => 'EXISTS',
+            ),
+        );
+
         $posts_limit = $limit > 0 ? $limit : 100;
         $post_status = ( $status !== 'any' && ! empty( $status ) ) ? $status : array( 'publish', 'draft', 'future', 'pending' );
 
@@ -133,6 +183,9 @@ class KavoshRank_Post_REST_Handler {
             if ( ! empty( $search ) ) {
                 $args['s'] = $search;
             }
+            if ( $only_generated ) {
+                $args['meta_query'] = $generated_meta_query;
+            }
             $posts = get_posts( $args );
         } elseif ( $requested_type === 'product' ) {
             $args = array(
@@ -144,6 +197,9 @@ class KavoshRank_Post_REST_Handler {
             );
             if ( ! empty( $search ) ) {
                 $args['s'] = $search;
+            }
+            if ( $only_generated ) {
+                $args['meta_query'] = $generated_meta_query;
             }
             $posts = get_posts( $args );
         } else {
@@ -166,6 +222,10 @@ class KavoshRank_Post_REST_Handler {
                 $post_args['s'] = $search;
                 $prod_args['s'] = $search;
             }
+            if ( $only_generated ) {
+                $post_args['meta_query'] = $generated_meta_query;
+                $prod_args['meta_query'] = $generated_meta_query;
+            }
 
             $blog_posts = get_posts( $post_args );
             $prod_posts = post_type_exists( 'product' ) ? get_posts( $prod_args ) : array();
@@ -186,6 +246,20 @@ class KavoshRank_Post_REST_Handler {
         $results = array();
 
         foreach ( $posts as $p ) {
+            $is_kavoshrank_generated = ! empty( get_post_meta( $p->ID, '_kavoshrank_generated', true ) )
+                || ! empty( get_post_meta( $p->ID, '_kavoshrank_article_id', true ) )
+                || ! empty( get_post_meta( $p->ID, '_kavoshrank_content_matrix_dimension', true ) )
+                || ! empty( get_post_meta( $p->ID, '_kavoshrank_pillar_category', true ) )
+                || ! empty( get_post_meta( $p->ID, '_kavoshrank_sub_category', true ) )
+                || ! empty( get_post_meta( $p->ID, '_kavoshrank_product_specs', true ) )
+                || ! empty( get_post_meta( $p->ID, '_kavoshrank_related_product_id', true ) )
+                || ! empty( get_post_meta( $p->ID, '_kavoshrank_related_post_id', true ) )
+                || ! empty( get_post_meta( $p->ID, '_tsw_generated', true ) )
+                || ! empty( get_post_meta( $p->ID, '_tsw_article_id', true ) );
+
+            if ( $only_generated && ! $is_kavoshrank_generated ) {
+                continue;
+            }
             $cat_name = '';
             if ( $p->post_type === 'product' ) {
                 $prod_cats = wp_get_post_terms( $p->ID, 'product_cat', array( 'fields' => 'names' ) );
@@ -237,6 +311,7 @@ class KavoshRank_Post_REST_Handler {
                 'status'          => $p->post_status === 'publish' ? 'published' : $p->post_status,
                 'featured_image'  => (string) $thumb_url,
                 'content_preview' => $clean_preview,
+                'is_generated'    => (bool) $is_kavoshrank_generated,
                 'created_at'      => get_the_date( 'Y/m/d - H:i', $p->ID ),
             );
 
@@ -451,6 +526,8 @@ class KavoshRank_Post_REST_Handler {
                 if ( ! empty( $pillar_cat ) ) {
                     update_post_meta( $existing_post_id, '_kavoshrank_pillar_category', $pillar_cat );
                 }
+                update_post_meta( $existing_post_id, '_kavoshrank_generated', '1' );
+                update_post_meta( $existing_post_id, '_kavoshrank_article_id', (string) $existing_post_id );
 
                 return new WP_REST_Response( array(
                     'status'             => 'success',
@@ -547,6 +624,7 @@ class KavoshRank_Post_REST_Handler {
         }
 
         // Tag post as KavoshRank managed to prevent collisions with third-party legacy plugins
+        update_post_meta( $post_id, '_kavoshrank_generated', '1' );
         update_post_meta( $post_id, '_kavoshrank_article_id', (string) $post_id );
 
         // Set Category Term (Created or Resolved)

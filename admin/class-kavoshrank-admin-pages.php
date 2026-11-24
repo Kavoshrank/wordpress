@@ -340,16 +340,73 @@ class KavoshRank_Admin_Pages {
             wp_send_json_error( array( 'message' => __( 'آدرس API پلتفرم الزامی است.', 'kavoshrank' ) ) );
         }
 
-        $base_url  = rtrim( $api_url, '/' );
+        if ( empty( $token ) ) {
+            wp_send_json_error( array( 'message' => __( 'کلید امنیتی اتصال (Secret Token) الزامی است. لطفاً کلید را از بخش تنظیمات اتصال در پنل کاوش‌رنک کپی فرمایید.', 'kavoshrank' ) ) );
+        }
+
+        $base_url   = rtrim( $api_url, '/' );
+        $start_time = microtime( true );
+
+        // 1. Primary verification: Call dedicated plugin handshake endpoint to authenticate token and activate project
+        $verify_endpoint = $base_url . '/api/v1/plugin/verify';
+        $verify_response = wp_safe_remote_post( $verify_endpoint, array(
+            'timeout'   => 10,
+            'sslverify' => true,
+            'headers'   => array(
+                'Accept'                      => 'application/json',
+                'Content-Type'                => 'application/json',
+                'X-KavoshRank-Secret-Token'   => $token,
+                'X-KavoshRank-Plugin-Version' => KAVOSHRANK_VERSION,
+                'User-Agent'                  => 'KavoshRank-WordPress-Client/' . KAVOSHRANK_VERSION,
+            ),
+            'body'      => wp_json_encode( array(
+                'site_url'       => home_url(),
+                'plugin_version' => KAVOSHRANK_VERSION,
+            ) ),
+        ) );
+
+        $latency = round( ( microtime( true ) - $start_time ) * 1000 );
+
+        if ( ! is_wp_error( $verify_response ) ) {
+            $code = wp_remote_retrieve_response_code( $verify_response );
+
+            if ( $code >= 200 && $code < 300 ) {
+                $body         = json_decode( wp_remote_retrieve_body( $verify_response ), true );
+                $project_name = ! empty( $body['data']['project_name'] ) ? sanitize_text_field( $body['data']['project_name'] ) : '';
+                $msg          = ! empty( $project_name )
+                    ? sprintf( __( 'ارتباط زنده با پروژه «%s» در پلتفرم کاوش‌رنک با موفقیت تایید و فعال شد.', 'kavoshrank' ), $project_name )
+                    : __( 'ارتباط زنده با پلتفرم کاوش‌رنک با موفقیت تایید شد. پلتفرم فعال و آماده به کار است.', 'kavoshrank' );
+
+                wp_send_json_success( array(
+                    'message'      => $msg,
+                    'latency_ms'   => $latency,
+                    'status'       => $code,
+                    'project_name' => $project_name,
+                ) );
+            } elseif ( 401 === $code ) {
+                wp_send_json_error( array(
+                    'message'    => __( 'کلید امنیتی اتصال (Secret Token) نامعتبر است یا در پنل کاوش‌رنک یافت نشد. لطفاً کلید صحیح پروژه را از بخش تنظیمات اتصال پنل کپی نمایید.', 'kavoshrank' ),
+                    'latency_ms' => $latency,
+                    'status'     => 401,
+                ) );
+            } elseif ( 403 === $code ) {
+                wp_send_json_error( array(
+                    'message'    => __( 'دسترسی پروژه در پلتفرم کاوش‌رنک محدود یا مسدود شده است.', 'kavoshrank' ),
+                    'latency_ms' => $latency,
+                    'status'     => 403,
+                ) );
+            }
+        }
+
+        // 2. Fallback to health endpoints if /verify is 404 (e.g. legacy server)
         $endpoints = array(
             $base_url . '/health/live',
             $base_url . '/api/v1/health/check',
             $base_url . '/health',
         );
 
-        $start_time = microtime( true );
-        $response   = null;
-        $code       = 0;
+        $response = null;
+        $code     = 0;
 
         foreach ( $endpoints as $endpoint ) {
             $response = wp_safe_remote_get( $endpoint, array(

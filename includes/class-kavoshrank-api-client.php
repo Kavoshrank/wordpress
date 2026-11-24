@@ -61,9 +61,11 @@ class KavoshRank_API_Client {
 
         $response = wp_remote_post( $url, array(
             'headers' => array(
-                'Content-Type'              => 'application/json',
-                'X-KavoshRank-Secret-Token' => self::get_secret_token(),
-                'X-TSW-Secret-Token'        => self::get_secret_token(),
+                'Content-Type'                => 'application/json',
+                'X-KavoshRank-Secret-Token'   => self::get_secret_token(),
+                'X-TSW-Secret-Token'          => self::get_secret_token(),
+                'X-KavoshRank-Plugin-Version' => defined( 'KAVOSHRANK_VERSION' ) ? KAVOSHRANK_VERSION : '1.0.3',
+                'User-Agent'                  => 'KavoshRank-WordPress-Plugin/' . ( defined( 'KAVOSHRANK_VERSION' ) ? KAVOSHRANK_VERSION : '1.0.3' ),
             ),
             'body'    => json_encode( $body ),
             'timeout' => 60,
@@ -92,9 +94,11 @@ class KavoshRank_API_Client {
 
         $response = wp_remote_get( $url, array(
             'headers' => array(
-                'Content-Type'              => 'application/json',
-                'X-KavoshRank-Secret-Token' => self::get_secret_token(),
-                'X-TSW-Secret-Token'        => self::get_secret_token(),
+                'Accept'                      => 'application/json',
+                'X-KavoshRank-Secret-Token'   => self::get_secret_token(),
+                'X-TSW-Secret-Token'          => self::get_secret_token(),
+                'X-KavoshRank-Plugin-Version' => defined( 'KAVOSHRANK_VERSION' ) ? KAVOSHRANK_VERSION : '1.0.3',
+                'User-Agent'                  => 'KavoshRank-WordPress-Plugin/' . ( defined( 'KAVOSHRANK_VERSION' ) ? KAVOSHRANK_VERSION : '1.0.3' ),
             ),
             'timeout' => 30,
         ) );

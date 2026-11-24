@@ -173,6 +173,13 @@ if ( ! function_exists( 'kavoshrank_check_version_upgrade' ) ) {
 
             update_option( 'kavoshrank_version', KAVOSHRANK_VERSION );
             update_option( 'kavoshrank_db_version', KAVOSHRANK_DB_VERSION );
+
+            if ( class_exists( 'KavoshRank_API_Client' ) && KavoshRank_API_Client::is_configured() ) {
+                KavoshRank_API_Client::post( 'api/v1/plugin/events', array(
+                    'event'   => 'plugin_version_upgraded',
+                    'version' => KAVOSHRANK_VERSION,
+                ) );
+            }
         }
     }
 }
