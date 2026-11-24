@@ -57,7 +57,7 @@ class KavoshRank_REST_Controller {
     public function register_routes() {
         add_filter( 'rest_post_dispatch', function( $response ) {
             if ( $response instanceof WP_REST_Response ) {
-                $response->header( 'X-KavoshRank-Plugin-Version', defined( 'KAVOSHRANK_VERSION' ) ? KAVOSHRANK_VERSION : '1.0.1' );
+                $response->header( 'X-KavoshRank-Plugin-Version', defined( 'KAVOSHRANK_VERSION' ) ? KAVOSHRANK_VERSION : '1.0.3' );
             }
             return $response;
         } );

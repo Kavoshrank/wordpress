@@ -83,7 +83,7 @@ class KavoshRank_Diagnostics {
     public static function handle_ping( WP_REST_Request $request ) {
         return new WP_REST_Response( array(
             'ok'             => true,
-            'plugin_version' => defined( 'KAVOSHRANK_VERSION' ) ? KAVOSHRANK_VERSION : '1.0.0',
+            'plugin_version' => defined( 'KAVOSHRANK_VERSION' ) ? KAVOSHRANK_VERSION : '1.0.3',
         ), 200 );
     }
 }
