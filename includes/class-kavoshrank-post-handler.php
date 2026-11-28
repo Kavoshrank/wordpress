@@ -596,6 +596,8 @@ class KavoshRank_Post_REST_Handler {
             $content = $raw_input_content;
         }
 
+        $post_author = self::resolve_post_author_id( $params );
+
         $post_data = array(
             'post_title'   => $title,
             'post_content' => wp_slash( $content ),
@@ -603,6 +605,10 @@ class KavoshRank_Post_REST_Handler {
             'post_status'  => $status,
             'post_type'    => $post_type,
         );
+
+        if ( $post_author > 0 ) {
+            $post_data['post_author'] = $post_author;
+        }
 
         if ( ! empty( $scheduled_date ) ) {
             $post_data['post_date']     = $scheduled_date;
@@ -946,5 +952,39 @@ class KavoshRank_Post_REST_Handler {
             'message' => 'Post trashed successfully',
             'id'      => $id,
         ) );
+    }
+
+    /**
+     * Resolve a valid WordPress user ID to assign as post_author for REST-created posts.
+     */
+    private static function resolve_post_author_id( array $params ) {
+        $requested = absint( $params['author_id'] ?? ( $params['post_author'] ?? 0 ) );
+        if ( $requested > 0 && get_userdata( $requested ) ) {
+            return $requested;
+        }
+
+        $current = get_current_user_id();
+        if ( $current > 0 ) {
+            return $current;
+        }
+
+        foreach ( array( 'administrator', 'editor', 'author' ) as $role ) {
+            $users = get_users( array(
+                'role'    => $role,
+                'orderby' => 'ID',
+                'order'   => 'ASC',
+                'number'  => 1,
+                'fields'  => array( 'ID' ),
+            ) );
+            if ( ! empty( $users ) ) {
+                return (int) $users[0]->ID;
+            }
+        }
+
+        if ( get_userdata( 1 ) ) {
+            return 1;
+        }
+
+        return 0;
     }
 }
